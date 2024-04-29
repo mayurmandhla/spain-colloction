@@ -1,0 +1,871 @@
+/* :root[
+    saol : SaolDisplayLight; 
+    soalitalic : SaolDisplayMedium; 
+] */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-color: #000000;
+}
+.curser{
+    cursor: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(253, 0, 0);
+    border: 2px solid rgb(255, 5, 5);
+    border-radius: 50%;
+  }
+
+#page1 {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: brown; */
+    height: 34vh;
+    padding: 0 15vw;
+
+}
+
+
+#nav-part1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+
+}
+
+#nav h4 {
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(10, 10, 10, 0.732);
+    border-bottom: 1px solid transparent;
+    transition: all ease-in 0.5s;
+    cursor: pointer;
+}
+
+#nav-part1 h4:nth-child(1) {
+    color: #bf1826;
+    border-bottom: 1px solid #bf1826;
+}
+
+#nav h4:hover {
+    color: #bf1826;
+    border-bottom: 1px solid #bf1826;
+
+}
+
+#nav-part2 {
+    height: 156px;
+    width: 138px;
+    margin-top: 7vh;
+    background-image: url("https://spaincollection.com/wp-content/themes/spaincollection/img/logo.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#nav-part3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+
+}
+
+#page1>h3 {
+    font-family: Saol display;
+    font-weight: 100;
+    font-size: 2.8vw;
+    margin-top: 2vh;
+    text-align: center;
+    width: 60%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#page1>h1 {
+    font-family: Saol display;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 14vh;
+    margin-top: 2vh;
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+
+#image-container {
+    height: 100vh;
+    width: 100%;
+    margin-top: 24vh;
+    position: relative;
+    /* background-color: #bf1826; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#image-container>h1 {
+    position: absolute;
+    font-family: Saol display;
+    font-style: italic;
+    font-size: 6vw;
+    text-transform: uppercase;
+    line-height: 6vw;
+    bottom: 10%;
+    width: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: 100;
+    text-align: center;
+    color: rgb(16, 13, 13);
+
+}
+
+#image-container>h1>span {
+    color: red;
+    font-family: Saol display;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+#image-container #part-1 {
+    height: 80%;
+    width: 32%;
+    position: relative;
+    /* background-color: rgb(49, 73, 65); */
+}
+
+#image-container #part-1 video {
+    height: 210px;
+    width: 180px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+#image-container #part-1 video:nth-child(1) {
+    top: 50%;
+    left: -10%;
+    transform: translate(0, -50%);
+}
+
+#image-container #part-1 video:nth-child(2) {
+    top: 0%;
+    right: 10%;
+}
+
+#image-container #part-1 video:nth-child(3) {
+    bottom: 0%;
+    right: 10%;
+}
+
+
+#image-container #part-2 {
+    height: 100%;
+    width: 32%;
+    position: relative;
+    flex-shrink: 0;
+    /* background-color: rgb(100, 122, 194); */
+}
+
+#image-container #part-2 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+#image-container #part-3 {
+    height: 80%;
+    width: 32%;
+    position: relative;
+    /* background-color: rgb(81, 143, 101); */
+}
+
+#image-container #part-3 video {
+    height: 210px;
+    width: 180px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+#image-container #part-3 video:nth-child(1) {
+    top: 50%;
+    right: -10%;
+    transform: translate(0, -50%);
+}
+
+#image-container #part-3 video:nth-child(2) {
+    top: 0%;
+    left: 10%;
+}
+
+#image-container #part-3 video:nth-child(3) {
+    bottom: 0%;
+    left: 10%;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #000000;
+    padding-top: 20vh;
+}
+
+#page2 #video-container {
+    height: 60vh;
+    width: 50vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+}
+
+#video-container #video-cover {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.518);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-cover i {
+    color: rgba(255, 255, 255, 0.317);
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.317);
+    border-radius: 50%;
+}
+
+#page2 h5 {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 19px;
+}
+
+#page2 h6 {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    /* background-color: black; */
+    padding: 5vh 0;
+
+
+}
+
+#page3 h3 {
+    color: red;
+    font-family: inter;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#page-3-flex {
+    height: 75vh;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.page3-elm {
+    height: 80%;
+    width: 20%;
+    /* background-color: aquamarine; */
+    position: relative;
+
+}
+
+.page3-elm img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page3-elm .page3-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #000000b3;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page3-overlay i {
+    padding: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+}
+
+#page4 {
+    height: 180vh;
+    width: 100vw;
+    position: relative;
+    /* background-color: #090808; */
+    
+}
+
+#page4>h1 {
+    position: absolute;
+    z-index: 99;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13vw;
+    font-family: Saol display;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: rgb(5, 5, 5);
+    line-height: .8;
+}
+
+#page4>h1>span {
+    font-family: Saol display;
+    font-style: italic;
+    text-transform: capitalize;
+    font-weight: 100;
+    color: #bf1826;
+}
+
+#cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 5%;
+    height: 85vh;
+    width: 100vw;
+    /* background-color: aqua; */
+}
+
+.page-card {
+    height: 100%;
+    width: 20%;
+    position: relative;
+    /* background-color: rgb(188, 32, 32); */
+    overflow: hidden;
+}
+
+.card-page-image>img{
+    height: 120%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page-card:nth-child(2){
+   margin-top: 10vw;
+}
+
+.card-page-image{
+    position: relative;
+    top: 0%;
+    overflow: hidden;
+    height: 70%;
+    width: 100%;
+}
+
+.page-card>h1{
+    margin-top: 2vw;
+    color: #000000;
+    font-size: 1.5vw;
+}
+
+.page-card>h3{
+    color: #0000009a;
+}
+
+/* SCROLLING EFFECT */
+
+#moveablebar, #moveablebar2{
+    position: relative;
+    height: 6vw;
+    font-size: 5vw;
+    /* background-color: aqua; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#moveablebar::-webkit-scrollbar{
+    display: none;
+}
+#moveablebar2::-webkit-scrollbar{
+    display: none;
+}
+
+#scrollingText{
+    display: flex;
+    white-space: nowrap; 
+    font-family: Saol display;
+    animation: anime 30s linear infinite;
+    animation-direction: reverse;  
+}
+
+#scrollingText2{
+    display: flex;
+    white-space: nowrap; 
+    font-family: Saol display;
+    animation: animerevars 30s linear infinite ;
+}
+
+
+.row1 span, .part2-row1 span{
+    position: relative;
+    margin: 0 2vw;
+    padding: 0 2vh;
+    white-space: nowrap;
+    color: black;
+    font-family: Saol display;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.row1 span::after, .part2-row1 span::after{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 2vw;
+    background-color: #000000;
+    /* border: 1px solid rgb(0, 0, 0, 0.726);
+    border-radius: 10px; */
+    top: 50%;
+    right: -20%;
+    /* background-color: rgb(5, 5, 5);    */
+}
+
+.row1 span:nth-child(2)::after, .part2-row1 span:nth-child(2)::after{
+    /* background-color: aqua; */
+    right: -15%;
+}
+
+
+
+.row2 span, .part2-row2 span{
+    position: relative;
+    margin: 0 2vw;
+    padding: 0 2vh;
+    color: black;
+    white-space: nowrap;
+    font-family: Saol display;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
+.row2 span::after, .part2-row2 span::after{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 2vw;
+    top: 50%;
+    right: -20%;
+    background-color: #000000;
+    /* border: 1px solid rgba(0, 0, 0, 0.726);
+    border-radius: 10px; */
+    /* background-color: rgb(10, 10, 10);    */
+}
+
+.row2 span:nth-child(2)::after{
+    right: -10%;
+}
+
+.part2-row2 span:nth-child(2)::after{
+    /* background-color: #bf1826; */
+    right: -10%;
+}
+.part2-row1 span:nth-child(2)::after{
+    /* background-color: #bf1826; */
+    right: -10%;
+}
+
+.part2-row1 span:nth-child(6)::after{
+    /* background-color: #bf1826; */
+    right: -10%;
+}
+
+.part2-row2 span:nth-child(6)::after{
+    /* background-color: #bf1826; */
+    right: -10%;
+}
+
+.part2-row1 span:nth-child(3)::after{
+    /* background-color: #bf1826; */
+    right: -10%;
+}
+
+.part2-row2 span:nth-child(3)::after{
+    /* background-color: #bf1826; */
+    right: -10%;
+}
+.part2-row1 span:nth-child(2)::after{
+    /* background-color: #bf1826; */
+    right: -10%;
+}
+
+.part2-row2 span:nth-child(2)::after{
+    /* background-color: #bf1826; */
+    right: -10%;
+}
+
+@keyframes anime{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-142%);
+    }
+}
+
+@keyframes animerevars{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(-159%);
+    }
+}
+
+/* .row1 span, .part2-row1 span{
+  -webkit-text-stroke: rgb(10, 10, 10) 1px;
+}
+
+.row2 span, .part2-row2 span{
+    -webkit-text-stroke: rgb(10, 10, 10) 1px;
+  } */
+
+  /* END SCROLLING EFFECT */
+
+    /* grab to scroll effect */
+
+    #page5 {
+        height: 110vh;
+        width: 100%;
+        padding: 1px;
+        background-color: rgb(7, 7, 7);
+      }
+      
+      #top-pera {
+        width: 20vw;
+        margin-top: 5vw;
+        margin-left: 9vw;
+        color: white;
+        font-family: Saol display;
+        font-size: 3.5vw;
+        font-weight: 100;
+        line-height: 3.2vw;
+      
+      }
+      
+      #top-pera>.red {
+        color: rgba(136, 3, 3, 0.939);
+        font-style: italic;
+        font-family: Saol display;
+      }
+      
+      .item {
+        display: inline-block;
+        background: skyblue;
+      
+        /* min-height: 250px;
+          min-width: 400px; */
+        margin: 2em 1em;
+      
+        @media screen and (max-width: 500px) {
+          min-height: 200px;
+          min-width: 200px;
+        }
+      }
+      
+      
+      #left {
+        position: relative;
+        left: 10vw;
+      }
+      
+      .items {
+        position: relative;
+        width: 100%;
+        margin-top: 5%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transform: scale(0.98);
+        will-change: transform;
+        user-select: none;
+        cursor: pointer;
+      }
+      
+      .items::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .items.active {
+        scale: 0.9;
+      }
+      
+      
+      .item1 {
+        white-space: normal;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        height: 74vh;
+        width: 25vw;
+        background-image: url("https://spaincollection.com/wp-content/uploads/2020/10/01-278.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      
+      .blacklayeer {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.516);
+        top: 0%;
+        /* z-index: 99; */
+      }
+      
+      .wraper {
+        position: absolute;
+        bottom: 5%;
+      }
+      
+      .label {
+        width: 70%;
+        padding: 5px 10%;
+        font-size: .7vw;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: red;
+        text-transform: uppercase;
+      }
+      
+      .label span{
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+      
+      .title {
+        padding: 5px 10%;
+        font-size: 2.2vw;
+        width: 80%;
+        font-family: Saol display;
+      }
+      
+      .text {
+        width: 70%;
+        padding-left: 10%;
+        font-size: 1.2vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
+      
+      .item2 {
+        white-space: normal;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        height: 74vh;
+        width: 25vw;
+        background-image: url("https://spaincollection.com/wp-content/uploads/2020/10/01-91.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      
+      .item3 {
+        white-space: normal;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        height: 74vh;
+        width: 25vw;
+        background-color: rgb(218, 181, 61);
+        background-image: url("https://spaincollection.com/wp-content/uploads/2020/10/01-303.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      
+      .item4 {
+        white-space: normal;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        height: 74vh;
+        width: 25vw;
+        background-color: rgb(111, 87, 22);
+        background-image: url("https://spaincollection.com/wp-content/uploads/2020/10/01-466.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      
+      .item5 {
+        white-space: normal;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        height: 74vh;
+        width: 25vw;
+        background-color: rgb(41, 122, 162);
+        background-image: url("https://spaincollection.com/wp-content/uploads/2020/10/01-182.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      
+      .item6 {
+        white-space: normal;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        height: 74vh;
+        width: 25vw;
+        background-color: rgba(42, 165, 151, 0.963);
+        background-image: url("https://spaincollection.com/wp-content/uploads/2020/10/009-scaled.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      
+      .item7 {
+        white-space: normal;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        height: 74vh;
+        width: 25vw;
+        background-color: rgb(121, 68, 220);
+        background-image: url("https://spaincollection.com/wp-content/uploads/2020/10/01-213.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      
+      .item8 {
+        white-space: normal;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        height: 74vh;
+        width: 25vw;
+        background-color: rgb(58, 106, 86);
+        background-image: url("https://spaincollection.com/wp-content/uploads/2020/10/01-96.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+
+ /* end of grab to scroll effect */
+
+  #page6{
+    height: 80vh;
+    width: 100%;
+  }
+
+  #page6>.footer{
+    width: 60%;
+    font-family: Saol display;
+    font-weight: 300;
+    position: relative;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 9vw;
+    line-height: 7vw;
+    /* background-color: aqua; */
+  }
+
+  #page6>.footer>span{
+    font-family: Saol display;
+    font-weight: 300;
+    color: red;
+  }
+
+  .footer::after{
+    content: " ";
+    position: absolute;
+    height: 1.5px;
+    width: 5vw;
+    background-color: #000000c2;
+    right: -15%;
+  }
+
+  .footer::before{
+    content: " ";
+    position: absolute;
+    height: 1.5px;
+    width: 5vw;
+    background-color: #000000c2;
+    top: 50%;
+    left: -15%;
+  }
